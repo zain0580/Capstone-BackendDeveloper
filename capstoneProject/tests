@@ -1,0 +1,8 @@
+from django.test import TestCase
+from llApp.models import Menu,Booking
+# Create your tests here.
+
+class MenuItemsTest(TestCase):
+    def test_get_item(self):
+        item = Menu.objects.create(title='Icecream',price=80,inventory=10)
+        self.assertEqual(item,"IceCream : 80")
